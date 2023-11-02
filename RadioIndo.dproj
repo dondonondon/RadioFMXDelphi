@@ -6,7 +6,7 @@
         <MainSource>RadioIndo.dpr</MainSource>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Release</Config>
-        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <Platform Condition="'$(Platform)'==''">Android64</Platform>
         <TargetedPlatforms>693267</TargetedPlatforms>
         <AppType>Application</AppType>
         <PlatformSDK Condition="'$(PlatformSDK)'=='' And '$(Platform)'=='Android64'">AndroidSDK25.2.5_64bit.sdk</PlatformSDK>
@@ -350,6 +350,7 @@
         <Android_NotificationIcon48>assets\img\Logo\Notif\48.png</Android_NotificationIcon48>
         <Android_NotificationIcon72>assets\img\Logo\Notif\72.png</Android_NotificationIcon72>
         <Android_NotificationIcon96>assets\img\Logo\Notif\96.png</Android_NotificationIcon96>
+        <BT_BuildType>AppStore</BT_BuildType>
         <Android_AppId>1:237435848499:android:7c088d6aa1b89a0db4e046</Android_AppId>
         <EL_AdMob>true</EL_AdMob>
         <Android_ApiKey>AIzaSyAfiy_XYi2-KsNiDW1GLB8ZmEOMRmQB1CA</Android_ApiKey>
@@ -483,6 +484,7 @@
                 <DeployFile LocalName="$(BDS)\lib\android\debug\armeabi-v7a\libnative-activity.so" Configuration="Release" Class="AndroidLibnativeArmeabiv7aFile"/>
                 <DeployFile LocalName="$(BDS)\lib\android\debug\armeabi-v7a\libnative-activity.so" Configuration="Release" Class="AndroidLibnativeArmeabiv7aFile">
                     <Platform Name="Android64">
+                        <Enabled>false</Enabled>
                         <RemoteName>libRadioIndo.so</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
@@ -497,6 +499,7 @@
                 </DeployFile>
                 <DeployFile LocalName="$(BDS)\lib\android\debug\armeabi\libnative-activity.so" Configuration="Release" Class="AndroidLibnativeArmeabiFile">
                     <Platform Name="Android64">
+                        <Enabled>false</Enabled>
                         <RemoteName>libRadioIndo.so</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
@@ -511,6 +514,7 @@
                 </DeployFile>
                 <DeployFile LocalName="$(BDS)\lib\android\debug\mips\libnative-activity.so" Configuration="Release" Class="AndroidLibnativeMipsFile">
                     <Platform Name="Android64">
+                        <Enabled>false</Enabled>
                         <RemoteName>libRadioIndo.so</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
