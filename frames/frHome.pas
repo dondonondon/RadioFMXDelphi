@@ -137,7 +137,7 @@ begin
   lb.StyleLookup := 'lbTempRadio';
 
   lb.StylesData['lblText.Text'] := fnReplaceStr(FNama, '\', '-');;
-  lb.StylesData['glFavorite.Images'] := DM.img;
+  lb.StylesData['glFavorite.Images'] := FMain.img;
   if FFavorite = 1 then
     lb.StylesData['glFavorite.ImageIndex'] := 5
   else

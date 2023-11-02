@@ -6,7 +6,7 @@
         <MainSource>RadioIndo.dpr</MainSource>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Release</Config>
-        <Platform Condition="'$(Platform)'==''">Android64</Platform>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
         <TargetedPlatforms>693267</TargetedPlatforms>
         <AppType>Application</AppType>
         <PlatformSDK Condition="'$(PlatformSDK)'=='' And '$(Platform)'=='Android64'">AndroidSDK25.2.5_64bit.sdk</PlatformSDK>
@@ -595,12 +595,6 @@
                 </DeployFile>
                 <DeployFile LocalName="Android\Release\libRadioIndo.so" Configuration="Release" Class="ProjectOutput">
                     <Platform Name="Android">
-                        <RemoteName>libRadioIndo.so</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="Android\Release\libRadioIndo.so" Configuration="Release" Class="ProjectOutput_Android32">
-                    <Platform Name="Android64">
                         <RemoteName>libRadioIndo.so</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
