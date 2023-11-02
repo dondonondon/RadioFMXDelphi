@@ -4,8 +4,8 @@
         <ProjectFileVersion>12</ProjectFileVersion>
     </ProjectExtensions>
     <PropertyGroup>
-        <DeviceId Condition="'$(Platform)'=='Android'">1A031FDF6004MB</DeviceId>
-        <DeviceId Condition="'$(Platform)'=='Android64'">1A031FDF6004MB</DeviceId>
+        <DeviceId Condition="'$(Platform)'=='Android'">75405820309784</DeviceId>
+        <DeviceId Condition="'$(Platform)'=='Android64'">0953925315003759</DeviceId>
         <DeviceId Condition="'$(Platform)'=='iOSDevice64'"/>
         <DeviceId Condition="'$(Platform)'=='iOSSimARM64'"/>
     </PropertyGroup>
@@ -32,15 +32,6 @@
         </DeployFile>
     </ItemGroup>
     <ItemGroup Condition="'$(Platform)'=='Android64'">
-        <DeployFile Include="sources\Lib\armeabi\libbassenc_mp3.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
-            <RemoteName>libbassenc_mp3.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="assets\img\Logo\72.png" Condition="'$(Config)'=='Release'">
             <RemoteDir>RadioIndo\res\drawable-hdpi\</RemoteDir>
             <RemoteName>ic_launcher.png</RemoteName>
@@ -104,15 +95,6 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="sources\Lib\armeabi\libbass_ssl.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
-            <RemoteName>libbass_ssl.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="sources\Lib\arm64-v8a\libbass_ssl.so" Condition="'$(Config)'=='Debug'">
             <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
             <RemoteName>libbass_ssl.so</RemoteName>
@@ -149,15 +131,6 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="sources\Lib\armeabi-v7a\libbassenc.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
-            <RemoteName>libbassenc.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="sources\Lib\arm64-v8a\libbass.so" Condition="'$(Config)'=='Debug'">
             <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
             <RemoteName>libbass.so</RemoteName>
@@ -185,25 +158,7 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="sources\Lib\armeabi-v7a\libbassenc_opus.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
-            <RemoteName>libbassenc_opus.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="sources\Lib\armeabi-v7a\libbass_ssl.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
-            <RemoteName>libbass_ssl.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="sources\Lib\armeabi-v7a\libbass_ssl.so" Condition="'$(Config)'=='Release'">
             <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
             <RemoteName>libbass_ssl.so</RemoteName>
             <DeployClass>File</DeployClass>
@@ -230,15 +185,6 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="sources\Lib\armeabi-v7a\libbassenc_mp3.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
-            <RemoteName>libbassenc_mp3.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="sources\Lib\armeabi-v7a\libbassflac.so" Condition="'$(Config)'=='Debug'">
             <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
             <RemoteName>libbassflac.so</RemoteName>
@@ -248,25 +194,7 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="sources\Lib\armeabi-v7a\libbassflac.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
-            <RemoteName>libbassflac.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="sources\Lib\armeabi\libbassenc_opus.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
-            <RemoteName>libbassenc_opus.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="sources\Lib\armeabi\libbassenc_opus.so" Condition="'$(Config)'=='Release'">
             <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
             <RemoteName>libbassenc_opus.so</RemoteName>
             <DeployClass>File</DeployClass>
@@ -330,25 +258,7 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="sources\Lib\armeabi\libbass.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
-            <RemoteName>libbass.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="sources\Lib\armeabi-v7a\libbass.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
-            <RemoteName>libbass.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="sources\Lib\armeabi-v7a\libbass.so" Condition="'$(Config)'=='Release'">
             <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
             <RemoteName>libbass.so</RemoteName>
             <DeployClass>File</DeployClass>
@@ -367,15 +277,6 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="sources\Lib\armeabi\libbassenc.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
-            <RemoteName>libbassenc.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="sources\Lib\armeabi\libbassenc.so" Condition="'$(Config)'=='Release'">
             <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
             <RemoteName>libbassenc.so</RemoteName>
             <DeployClass>File</DeployClass>
@@ -465,9 +366,9 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="sources\Lib\armeabi\libbassenc_flac.so" Condition="'$(Config)'=='Release'">
+        <DeployFile Include="sources\Lib\armeabi\libbassenc_ogg.so" Condition="'$(Config)'=='Debug'">
             <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
-            <RemoteName>libbassenc_flac.so</RemoteName>
+            <RemoteName>libbassenc_ogg.so</RemoteName>
             <DeployClass>File</DeployClass>
             <Operation>0</Operation>
             <LocalCommand/>
@@ -488,24 +389,6 @@
             <RemoteName>ic_launcher.png</RemoteName>
             <DeployClass>Android_LauncherIcon144</DeployClass>
             <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="sources\Lib\armeabi\libbassenc_ogg.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
-            <RemoteName>libbassenc_ogg.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="sources\Lib\armeabi\libbassenc_ogg.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
-            <RemoteName>libbassenc_ogg.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
@@ -556,15 +439,6 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="sources\Lib\armeabi-v7a\libbassenc_flac.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
-            <RemoteName>libbassenc_flac.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="sources\Lib\armeabi-v7a\libbassenc_flac.so" Condition="'$(Config)'=='Release'">
             <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
             <RemoteName>libbassenc_flac.so</RemoteName>
             <DeployClass>File</DeployClass>
@@ -627,15 +501,6 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="sources\Lib\armeabi-v7a\libbassenc_ogg.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
-            <RemoteName>libbassenc_ogg.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="assets\img\noImage.png" Condition="'$(Config)'=='Release'">
             <RemoteDir>RadioIndo\assets\internal\</RemoteDir>
             <RemoteName>noImage.png</RemoteName>
@@ -655,15 +520,6 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="sources\Lib\armeabi\libbassflac.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
-            <RemoteName>libbassflac.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="sources\Lib\armeabi\libbassflac.so" Condition="'$(Config)'=='Release'">
             <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
             <RemoteName>libbassflac.so</RemoteName>
             <DeployClass>File</DeployClass>
@@ -692,9 +548,9 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="sources\Lib\arm64-v8a\libbassenc_ogg.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
-            <RemoteName>libbassenc_ogg.so</RemoteName>
+        <DeployFile Include="sources\Lib\armeabi\libbassenc_flac.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libbassenc_flac.so</RemoteName>
             <DeployClass>File</DeployClass>
             <Operation>0</Operation>
             <LocalCommand/>
@@ -706,24 +562,6 @@
             <RemoteName>splash_image.png</RemoteName>
             <DeployClass>Android_SplashImage470</DeployClass>
             <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="sources\Lib\arm64\libbass_ssl.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>RadioIndo\library\lib\arm64\</RemoteDir>
-            <RemoteName>libbass_ssl.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="sources\Lib\armeabi\libbassenc_flac.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
-            <RemoteName>libbassenc_flac.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
@@ -764,20 +602,20 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Android\Release\styles-v21.xml" Condition="'$(Config)'=='Release'">
-            <RemoteDir>RadioIndo\res\values-v21\</RemoteDir>
-            <RemoteName>styles.xml</RemoteName>
-            <DeployClass>AndroidSplashStylesV21</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="sources\Lib\armeabi\libbass.so" Condition="'$(Config)'=='Release'">
             <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
             <RemoteName>libbass.so</RemoteName>
             <DeployClass>File</DeployClass>
             <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android\Release\styles-v21.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\values-v21\</RemoteDir>
+            <RemoteName>styles.xml</RemoteName>
+            <DeployClass>AndroidSplashStylesV21</DeployClass>
+            <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
@@ -809,24 +647,6 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="sources\Lib\arm64-v8a\libbass_ssl.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
-            <RemoteName>libbass_ssl.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="sources\Lib\arm64\libbassenc_opus.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>RadioIndo\library\lib\arm64\</RemoteDir>
-            <RemoteName>libbassenc_opus.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="$(BDS)\lib\android\debug\armeabi\libnative-activity.so" Condition="'$(Config)'=='Release'">
             <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
             <RemoteName>libRadioIndo.so</RemoteName>
@@ -841,15 +661,6 @@
             <RemoteName>ic_notification.png</RemoteName>
             <DeployClass>Android_NotificationIcon36</DeployClass>
             <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="sources\Lib\arm64-v8a\libbassenc_flac.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
-            <RemoteName>libbassenc_flac.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
@@ -926,15 +737,6 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="sources\Lib\arm64-v8a\libbass.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
-            <RemoteName>libbass.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="sources\Lib\armeabi\libbassenc_ogg.so" Condition="'$(Config)'=='Release'">
             <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
             <RemoteName>libbassenc_ogg.so</RemoteName>
@@ -962,15 +764,6 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="sources\Lib\arm64\libbassflac.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>RadioIndo\library\lib\arm64\</RemoteDir>
-            <RemoteName>libbassflac.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="sources\Lib\armeabi-v7a\libbass_ssl.so" Condition="'$(Config)'=='Release'">
             <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
             <RemoteName>libbass_ssl.so</RemoteName>
@@ -990,56 +783,11 @@
             <Overwrite>True</Overwrite>
             <Required>True</Required>
         </DeployFile>
-        <DeployFile Include="sources\Lib\arm64\libbass.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>RadioIndo\library\lib\arm64\</RemoteDir>
-            <RemoteName>libbass.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="sources\Lib\arm64\libbassenc_mp3.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>RadioIndo\library\lib\arm64\</RemoteDir>
-            <RemoteName>libbassenc_mp3.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="sources\Lib\arm64-v8a\libbassenc.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
-            <RemoteName>libbassenc.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="assets\img\Splash\640x480.png" Condition="'$(Config)'=='Release'">
             <RemoteDir>RadioIndo\res\drawable-large\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
             <DeployClass>Android_SplashImage640</DeployClass>
             <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="sources\Lib\arm64-v8a\libbassenc_mp3.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
-            <RemoteName>libbassenc_mp3.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="sources\Lib\arm64\libbassenc_ogg.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>RadioIndo\library\lib\arm64\</RemoteDir>
-            <RemoteName>libbassenc_ogg.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
@@ -1067,15 +815,6 @@
             <RemoteName>ic_launcher.png</RemoteName>
             <DeployClass>Android_LauncherIcon96</DeployClass>
             <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="sources\Lib\arm64\libbassenc.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>RadioIndo\library\lib\arm64\</RemoteDir>
-            <RemoteName>libbassenc.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
@@ -1125,15 +864,6 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="sources\Lib\arm64\libbassenc_flac.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>RadioIndo\library\lib\arm64\</RemoteDir>
-            <RemoteName>libbassenc_flac.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="sources\Lib\armeabi-v7a\libbassenc_mp3.so" Condition="'$(Config)'=='Release'">
             <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
             <RemoteName>libbassenc_mp3.so</RemoteName>
@@ -1179,29 +909,11 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="sources\Lib\arm64-v8a\libbassenc_opus.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
-            <RemoteName>libbassenc_opus.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="assets\img\Logo\Notif\96.png" Condition="'$(Config)'=='Release'">
             <RemoteDir>RadioIndo\res\drawable-xxxhdpi\</RemoteDir>
             <RemoteName>ic_notification.png</RemoteName>
             <DeployClass>Android_NotificationIcon96</DeployClass>
             <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="sources\Lib\arm64-v8a\libbassflac.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
-            <RemoteName>libbassflac.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>

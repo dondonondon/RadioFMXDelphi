@@ -115,6 +115,14 @@ end;
 
 procedure TFLoading.setFrame;
 begin
+
+  if FToken = '' then begin
+    for var i := 0 to 32 do
+      FToken := FToken + Chr(ord('A') + Random(26));
+
+    SaveSettingString('token', 'token_temporary', FToken);
+  end;
+
   Self.setAnchorContent;
 end;
 

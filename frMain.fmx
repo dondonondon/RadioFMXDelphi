@@ -210,7 +210,7 @@ object FMain: TFMain
       end
       object btnNowPlaying: TCornerButton
         Anchors = [akRight]
-        Images = DM.img
+        Images = img
         ImageIndex = 8
         Margins.Left = 4.000000000000000000
         Margins.Top = 4.000000000000000000

@@ -264,23 +264,23 @@ begin
       FService1.SetHideKeyboardButtonVisibility(True);
     end;
 
-    if TPlatformServices.Current.SupportsPlatformService(IFMXApplicationEventService, IInterface(AppEvent)) then
-        AppEvent.SetApplicationEventHandler(AppEventProc);
-
-    {$IFDEF IOS}
-      PushService := TPushServiceManager.Instance.GetServiceByName(TPushService.TServiceNames.APS);
-    {$ELSE}
-      PushService := TPushServiceManager.Instance.GetServiceByName(TPushService.TServiceNames.FCM);
-    {$ENDIF}
-
-    ServiceConnection := TPushServiceConnection.Create(PushService);
-    ServiceConnection.OnChange := DoServiceConnectionChange;
-    ServiceConnection.OnReceiveNotification := DoReceiveNotificationEvent;
-
-    FPermissionReadExternalStorage := JStringToString(TJManifest_permission.JavaClass.READ_EXTERNAL_STORAGE);      //permission
-    FPermissionWriteExternalStorage := JStringToString(TJManifest_permission.JavaClass.WRITE_EXTERNAL_STORAGE);     //permission
-    FAccess_Coarse_Location := JStringToString(TJManifest_permission.JavaClass.ACCESS_COARSE_LOCATION);
-    FAccess_Fine_Location := JStringToString(TJManifest_permission.JavaClass.ACCESS_FINE_LOCATION);
+//    if TPlatformServices.Current.SupportsPlatformService(IFMXApplicationEventService, IInterface(AppEvent)) then
+//        AppEvent.SetApplicationEventHandler(AppEventProc);
+//
+//    {$IFDEF IOS}
+//      PushService := TPushServiceManager.Instance.GetServiceByName(TPushService.TServiceNames.APS);
+//    {$ELSE}
+//      PushService := TPushServiceManager.Instance.GetServiceByName(TPushService.TServiceNames.FCM);
+//    {$ENDIF}
+//
+//    ServiceConnection := TPushServiceConnection.Create(PushService);
+//    ServiceConnection.OnChange := DoServiceConnectionChange;
+//    ServiceConnection.OnReceiveNotification := DoReceiveNotificationEvent;
+//
+//    FPermissionReadExternalStorage := JStringToString(TJManifest_permission.JavaClass.READ_EXTERNAL_STORAGE);      //permission
+//    FPermissionWriteExternalStorage := JStringToString(TJManifest_permission.JavaClass.WRITE_EXTERNAL_STORAGE);     //permission
+//    FAccess_Coarse_Location := JStringToString(TJManifest_permission.JavaClass.ACCESS_COARSE_LOCATION);
+//    FAccess_Fine_Location := JStringToString(TJManifest_permission.JavaClass.ACCESS_FINE_LOCATION);
 
     TAndroidHelper.Activity.getWindow.setStatusBarColor($FF3E424F);
     TAndroidHelper.Activity.getWindow.setNavigationBarColor($FF3E424F);
@@ -342,12 +342,14 @@ end;
 
 procedure TFMain.FormShow(Sender: TObject);
 begin
+  FToken := LoadSettingString('token', 'token_temporary', '');
+
   loNowPlaying.Visible := False;
-  {$IF DEFINED (ANDROID) OR DEFINED(IOS)}
-  ServiceConnection.Active := True;
-  {$ELSE}
-    FToken := 'jkasdhkjadsh98uada9sduasjio';
-  {$ENDIF}
+//  {$IF DEFINED (ANDROID) OR DEFINED(IOS)}
+//  ServiceConnection.Active := True;
+//  {$ELSE}
+//    FToken := 'jkasdhkjadsh98uada9sduasjio';
+//  {$ENDIF}
 
   FIsAdmob := True;
 
