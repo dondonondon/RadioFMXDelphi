@@ -1,0 +1,533 @@
+object FHome: TFHome
+  Size.Width = 360.000000000000000000
+  Size.Height = 720.000000000000000000
+  Size.PlatformDefault = False
+  object background: TRectangle
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Fill.Color = xFF3E424F
+    Size.Width = 360.000000000000000000
+    Size.Height = 720.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+  end
+  object loMain: TLayout
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Size.Width = 360.000000000000000000
+    Size.Height = 720.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object lbMain: TListBox
+      Anchors = [akLeft, akTop, akRight, akBottom]
+      Position.Y = 56.000000000000000000
+      Size.Width = 360.000000000000000000
+      Size.Height = 664.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'transparentlistboxstyle'
+      TabOrder = 1
+      ShowScrollBars = False
+      DisableFocusEffect = True
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      Viewport.Width = 360.000000000000000000
+      Viewport.Height = 664.000000000000000000
+      object lbiRadio: TListBoxItem
+        Selectable = False
+        Size.Width = 360.000000000000000000
+        Size.Height = 190.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        object Label1: TLabel
+          StyledSettings = [Family, Style]
+          Position.X = 8.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 345.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 12.500000000000000000
+          TextSettings.FontColor = claWhite
+          Text = 'Radio'
+          TabOrder = 41
+        end
+        object Label2: TLabel
+          Anchors = [akLeft, akTop, akRight]
+          StyledSettings = [Family]
+          Hint = 'loadRadio'
+          HitTest = True
+          Position.X = 7.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 345.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 12.500000000000000000
+          TextSettings.Font.StyleExt = {04040000000000000004000000}
+          TextSettings.FontColor = xFFCACACA
+          TextSettings.HorzAlign = Trailing
+          Text = 'See All'
+          TabOrder = 40
+          OnClick = fnClickSeeAll
+        end
+        object lbRadio: TListBox
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          Margins.Top = 35.000000000000000000
+          Margins.Bottom = 8.000000000000000000
+          Position.Y = 35.000000000000000000
+          Size.Width = 360.000000000000000000
+          Size.Height = 147.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'transparentlistboxstyle'
+          TabOrder = 42
+          ShowScrollBars = False
+          DisableFocusEffect = True
+          DefaultItemStyles.ItemStyle = ''
+          DefaultItemStyles.GroupHeaderStyle = ''
+          DefaultItemStyles.GroupFooterStyle = ''
+          ListStyle = Horizontal
+          OnItemClick = lbRadioItemClick
+          Viewport.Width = 360.000000000000000000
+          Viewport.Height = 147.000000000000000000
+        end
+      end
+      object lbiMyFavorite: TListBoxItem
+        Selectable = False
+        Position.Y = 190.000000000000000000
+        Size.Width = 360.000000000000000000
+        Size.Height = 190.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object Label9: TLabel
+          StyledSettings = [Family, Style]
+          Position.X = 8.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 345.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 12.500000000000000000
+          TextSettings.FontColor = claWhite
+          Text = 'My Favorite'
+          TabOrder = 41
+        end
+        object Label10: TLabel
+          Anchors = [akLeft, akTop, akRight]
+          StyledSettings = [Family]
+          Hint = 'loadMyFavorite'
+          HitTest = True
+          Position.X = 7.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 345.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 12.500000000000000000
+          TextSettings.Font.StyleExt = {04040000000000000004000000}
+          TextSettings.FontColor = xFFCACACA
+          TextSettings.HorzAlign = Trailing
+          Text = 'See All'
+          TabOrder = 40
+          OnClick = fnClickSeeAll
+        end
+        object lbMyFavorite: TListBox
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          Margins.Top = 35.000000000000000000
+          Margins.Bottom = 8.000000000000000000
+          Position.Y = 35.000000000000000000
+          Size.Width = 360.000000000000000000
+          Size.Height = 147.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'transparentlistboxstyle'
+          TabOrder = 42
+          ShowScrollBars = False
+          DisableFocusEffect = True
+          DefaultItemStyles.ItemStyle = ''
+          DefaultItemStyles.GroupHeaderStyle = ''
+          DefaultItemStyles.GroupFooterStyle = ''
+          ListStyle = Horizontal
+          OnItemClick = lbRadioItemClick
+          Viewport.Width = 360.000000000000000000
+          Viewport.Height = 147.000000000000000000
+        end
+      end
+      object lbiFavorite: TListBoxItem
+        Selectable = False
+        Position.Y = 380.000000000000000000
+        Size.Width = 360.000000000000000000
+        Size.Height = 190.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        object Label3: TLabel
+          StyledSettings = [Family, Style]
+          Position.X = 8.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 345.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 12.500000000000000000
+          TextSettings.FontColor = claWhite
+          Text = 'Top Favorite'
+          TabOrder = 41
+        end
+        object Label4: TLabel
+          Anchors = [akLeft, akTop, akRight]
+          StyledSettings = [Family]
+          Hint = 'loadFavorite'
+          HitTest = True
+          Position.X = 7.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 345.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 12.500000000000000000
+          TextSettings.Font.StyleExt = {04040000000000000004000000}
+          TextSettings.FontColor = xFFCACACA
+          TextSettings.HorzAlign = Trailing
+          Text = 'See All'
+          TabOrder = 40
+          OnClick = fnClickSeeAll
+        end
+        object lbFavorite: TListBox
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          Margins.Top = 35.000000000000000000
+          Margins.Bottom = 8.000000000000000000
+          Position.Y = 35.000000000000000000
+          Size.Width = 360.000000000000000000
+          Size.Height = 147.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'transparentlistboxstyle'
+          TabOrder = 42
+          ShowScrollBars = False
+          DisableFocusEffect = True
+          DefaultItemStyles.ItemStyle = ''
+          DefaultItemStyles.GroupHeaderStyle = ''
+          DefaultItemStyles.GroupFooterStyle = ''
+          ListStyle = Horizontal
+          OnItemClick = lbRadioItemClick
+          Viewport.Width = 360.000000000000000000
+          Viewport.Height = 147.000000000000000000
+        end
+      end
+      object lbiListenerToday: TListBoxItem
+        Selectable = False
+        Position.Y = 570.000000000000000000
+        Size.Width = 360.000000000000000000
+        Size.Height = 190.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object Label5: TLabel
+          StyledSettings = [Family, Style]
+          Position.X = 8.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 345.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 12.500000000000000000
+          TextSettings.FontColor = claWhite
+          Text = 'Top Listener Today'
+          TabOrder = 41
+        end
+        object Label6: TLabel
+          Anchors = [akLeft, akTop, akRight]
+          StyledSettings = [Family]
+          Hint = 'loadListenerToday'
+          HitTest = True
+          Position.X = 7.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 345.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 12.500000000000000000
+          TextSettings.Font.StyleExt = {04040000000000000004000000}
+          TextSettings.FontColor = xFFCACACA
+          TextSettings.HorzAlign = Trailing
+          Text = 'See All'
+          TabOrder = 40
+          OnClick = fnClickSeeAll
+        end
+        object lbListenerToday: TListBox
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          Margins.Top = 35.000000000000000000
+          Margins.Bottom = 8.000000000000000000
+          Position.Y = 35.000000000000000000
+          Size.Width = 360.000000000000000000
+          Size.Height = 147.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'transparentlistboxstyle'
+          TabOrder = 42
+          ShowScrollBars = False
+          DisableFocusEffect = True
+          DefaultItemStyles.ItemStyle = ''
+          DefaultItemStyles.GroupHeaderStyle = ''
+          DefaultItemStyles.GroupFooterStyle = ''
+          ListStyle = Horizontal
+          OnItemClick = lbRadioItemClick
+          Viewport.Width = 360.000000000000000000
+          Viewport.Height = 147.000000000000000000
+        end
+      end
+      object lbiListenerAll: TListBoxItem
+        Selectable = False
+        Position.Y = 760.000000000000000000
+        Size.Width = 360.000000000000000000
+        Size.Height = 190.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Label7: TLabel
+          StyledSettings = [Family, Style]
+          Position.X = 8.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 345.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 12.500000000000000000
+          TextSettings.FontColor = claWhite
+          Text = 'Top Listener All Time'
+          TabOrder = 40
+        end
+        object Label8: TLabel
+          Anchors = [akLeft, akTop, akRight]
+          StyledSettings = [Family]
+          Hint = 'loadListener'
+          HitTest = True
+          Position.X = 7.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 345.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 12.500000000000000000
+          TextSettings.Font.StyleExt = {04040000000000000004000000}
+          TextSettings.FontColor = xFFCACACA
+          TextSettings.HorzAlign = Trailing
+          Text = 'See All'
+          TabOrder = 39
+          OnClick = fnClickSeeAll
+        end
+        object lbListenerAll: TListBox
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          Margins.Top = 35.000000000000000000
+          Margins.Bottom = 8.000000000000000000
+          Position.Y = 35.000000000000000000
+          Size.Width = 360.000000000000000000
+          Size.Height = 147.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'transparentlistboxstyle'
+          TabOrder = 41
+          ShowScrollBars = False
+          DisableFocusEffect = True
+          DefaultItemStyles.ItemStyle = ''
+          DefaultItemStyles.GroupHeaderStyle = ''
+          DefaultItemStyles.GroupFooterStyle = ''
+          ListStyle = Horizontal
+          OnItemClick = lbRadioItemClick
+          Viewport.Width = 360.000000000000000000
+          Viewport.Height = 147.000000000000000000
+        end
+      end
+      object ListBoxItem17: TListBoxItem
+        Selectable = False
+        Position.Y = 950.000000000000000000
+        Size.Width = 360.000000000000000000
+        Size.Height = 65.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+      end
+    end
+    object loHeader: TLayout
+      Anchors = [akLeft, akTop, akRight]
+      Size.Width = 360.000000000000000000
+      Size.Height = 57.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object Rectangle1: TRectangle
+        Anchors = [akLeft, akTop, akRight, akBottom]
+        Fill.Color = xFF515766
+        Size.Width = 360.000000000000000000
+        Size.Height = 57.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+      end
+      object seHeader: TShadowEffect
+        Distance = 3.000000000000000000
+        Direction = 45.000000000000000000
+        Softness = 0.300000011920929000
+        Opacity = 0.349999994039535500
+        ShadowColor = claBlack
+      end
+      object CornerButton1: TCornerButton
+        Images = DM.img
+        ImageIndex = 1
+        Position.X = 12.000000000000000000
+        Position.Y = 12.000000000000000000
+        Sides = [Top, Left, Bottom, Right]
+        Size.Width = 32.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'btnImg'
+        TabOrder = 2
+        Visible = False
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+      end
+      object btnFind: TCornerButton
+        Anchors = [akTop, akRight]
+        Images = FMain.img
+        ImageIndex = 7
+        Position.X = 316.000000000000000000
+        Position.Y = 12.000000000000000000
+        Sides = [Top, Left, Bottom, Right]
+        Size.Width = 32.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'btnImg'
+        TabOrder = 1
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+        OnClick = btnFindClick
+      end
+      object CornerButton2: TCornerButton
+        Position.X = 144.000000000000000000
+        Position.Y = 16.000000000000000000
+        Sides = [Top, Left, Bottom, Right]
+        TabOrder = 3
+        Text = 'CornerButton2'
+        Visible = False
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+        OnClick = CornerButton2Click
+      end
+    end
+    object Memo1: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      Align = Bottom
+      Position.Y = 560.000000000000000000
+      Size.Width = 360.000000000000000000
+      Size.Height = 160.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Visible = False
+      Viewport.Width = 360.000000000000000000
+      Viewport.Height = 160.000000000000000000
+    end
+  end
+  object tempImg: TImage
+    MultiResBitmap = <
+      item
+      end>
+    Position.X = 104.000000000000000000
+    Visible = False
+  end
+  object loReload: TLayout
+    Align = Contents
+    Size.Width = 360.000000000000000000
+    Size.Height = 720.000000000000000000
+    Size.PlatformDefault = False
+    Visible = False
+    TabOrder = 7
+    object Rectangle2: TRectangle
+      Align = Contents
+      Fill.Color = xFF3E424F
+      Size.Width = 360.000000000000000000
+      Size.Height = 720.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+    end
+    object btnReload: TCornerButton
+      Anchors = [akLeft, akTop, akRight]
+      StyledSettings = [Family]
+      Position.X = 103.000000000000000000
+      Position.Y = 342.000000000000000000
+      Sides = [Top, Left, Bottom, Right]
+      Size.Width = 153.000000000000000000
+      Size.Height = 35.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'btnMain'
+      TabOrder = 1
+      Text = 'Reload'
+      TextSettings.Font.Size = 12.500000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = xFF3E424F
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+      OnClick = btnReloadClick
+    end
+    object lblPesan: TLabel
+      Anchors = [akLeft, akTop, akRight]
+      StyledSettings = [Family, Style]
+      Position.X = 8.000000000000000000
+      Position.Y = 392.000000000000000000
+      Size.Width = 345.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 12.500000000000000000
+      TextSettings.FontColor = claWhite
+      TextSettings.HorzAlign = Center
+      Text = 'Gagal Memuat Channel'
+      TabOrder = 2
+    end
+  end
+  object memFavorite: TFDMemTable
+    Tag = 1
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    Left = 88
+    Top = 112
+  end
+  object memData: TFDMemTable
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    Left = 272
+    Top = 16
+  end
+  object memListener: TFDMemTable
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    Left = 152
+    Top = 112
+  end
+  object memListenerAll: TFDMemTable
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    Left = 224
+    Top = 112
+  end
+  object memRadio: TFDMemTable
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    Left = 24
+    Top = 112
+  end
+  object memMyFavorite: TFDMemTable
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    Left = 288
+    Top = 112
+  end
+end

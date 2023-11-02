@@ -1,0 +1,101 @@
+object FTemp: TFTemp
+  Size.Width = 360.000000000000000000
+  Size.Height = 720.000000000000000000
+  Size.PlatformDefault = False
+  object loMain: TLayout
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Size.Width = 360.000000000000000000
+    Size.Height = 720.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object background: TRectangle
+      Anchors = [akLeft, akTop, akRight, akBottom]
+      Fill.Color = xFF3E424F
+      Size.Width = 360.000000000000000000
+      Size.Height = 720.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+    end
+    object Layout1: TLayout
+      Anchors = [akLeft, akTop, akRight, akBottom]
+      Size.Width = 360.000000000000000000
+      Size.Height = 720.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object loHeader: TLayout
+        Anchors = [akLeft, akTop, akRight]
+        Size.Width = 360.000000000000000000
+        Size.Height = 57.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object Rectangle1: TRectangle
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          Fill.Color = xFF515766
+          Size.Width = 360.000000000000000000
+          Size.Height = 57.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+        end
+        object seHeader: TShadowEffect
+          Distance = 3.000000000000000000
+          Direction = 45.000000000000000000
+          Softness = 0.300000011920929000
+          Opacity = 0.349999994039535500
+          ShadowColor = claBlack
+        end
+        object CornerButton1: TCornerButton
+          Images = DM.img
+          ImageIndex = 1
+          Position.X = 12.000000000000000000
+          Position.Y = 12.000000000000000000
+          Sides = [Top, Left, Bottom, Right]
+          Size.Width = 32.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'btnImg'
+          TabOrder = 2
+          XRadius = 3.000000000000000000
+          YRadius = 3.000000000000000000
+        end
+        object btnFind: TCornerButton
+          Anchors = [akTop, akRight]
+          Images = DM.img
+          ImageIndex = 7
+          Position.X = 316.000000000000000000
+          Position.Y = 12.000000000000000000
+          Sides = [Top, Left, Bottom, Right]
+          Size.Width = 32.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'btnImg'
+          TabOrder = 1
+          XRadius = 3.000000000000000000
+          YRadius = 3.000000000000000000
+        end
+      end
+      object lbMain: TListBox
+        Anchors = [akLeft, akTop, akRight, akBottom]
+        Position.Y = 56.000000000000000000
+        Size.Width = 360.000000000000000000
+        Size.Height = 664.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'transparentlistboxstyle'
+        TabOrder = 1
+        ShowScrollBars = False
+        DisableFocusEffect = True
+        DefaultItemStyles.ItemStyle = ''
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        Viewport.Width = 360.000000000000000000
+        Viewport.Height = 664.000000000000000000
+        object lb: TListBoxItem
+          Selectable = False
+          Size.Width = 360.000000000000000000
+          Size.Height = 65.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+        end
+      end
+    end
+  end
+end

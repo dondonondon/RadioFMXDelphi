@@ -1,0 +1,332 @@
+object FDetail: TFDetail
+  Size.Width = 360.000000000000000000
+  Size.Height = 720.000000000000000000
+  Size.PlatformDefault = False
+  object loMain: TLayout
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Size.Width = 360.000000000000000000
+    Size.Height = 720.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object background: TRectangle
+      Anchors = [akLeft, akTop, akRight, akBottom]
+      Fill.Color = xFF3E424F
+      Size.Width = 360.000000000000000000
+      Size.Height = 720.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+    end
+    object lbSearch: TListBox
+      Anchors = [akLeft, akTop, akRight, akBottom]
+      Position.Y = 56.000000000000000000
+      Size.Width = 360.000000000000000000
+      Size.Height = 664.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'transparentlistboxstyle'
+      TabOrder = 0
+      ShowScrollBars = False
+      OnViewportPositionChange = lbSearchViewportPositionChange
+      DisableFocusEffect = True
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      OnItemClick = lbSearchItemClick
+      Viewport.Width = 360.000000000000000000
+      Viewport.Height = 664.000000000000000000
+    end
+    object loHeader: TLayout
+      Anchors = [akLeft, akTop, akRight]
+      Size.Width = 360.000000000000000000
+      Size.Height = 57.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object reHeader: TRectangle
+        Anchors = [akLeft, akTop, akRight, akBottom]
+        Corners = [BottomLeft, BottomRight]
+        Fill.Color = xFF535A6C
+        Size.Width = 360.000000000000000000
+        Size.Height = 57.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        XRadius = 25.000000000000000000
+        YRadius = 12.000000000000000000
+      end
+      object Label1: TLabel
+        Anchors = [akLeft, akRight, akBottom]
+        AutoSize = True
+        StyledSettings = [Family]
+        Position.X = 24.000000000000000000
+        Position.Y = -61.000000000000000000
+        Size.Width = 313.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 25.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claWhite
+        Text = 'Search '
+        Visible = False
+        TabOrder = 0
+      end
+      object reHeaderBtn: TRectangle
+        Anchors = [akLeft, akTop, akRight]
+        Fill.Color = xFF8B93A5
+        Position.X = 24.000000000000000000
+        Position.Y = 73.000000000000000000
+        Size.Width = 313.000000000000000000
+        Size.Height = 45.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        Visible = False
+        XRadius = 16.000000000000000000
+        YRadius = 16.000000000000000000
+      end
+      object lblPos: TLabel
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 8.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 345.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 11.000000000000000000
+        Text = 'lblPos'
+        Visible = False
+        TabOrder = 1
+      end
+      object edSearch: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight, akBottom]
+        StyleLookup = 'edLoginText'
+        TabOrder = 2
+        Position.X = 24.000000000000000000
+        Position.Y = -21.000000000000000000
+        Size.Width = 257.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Cari Channel Radio'
+        Visible = False
+      end
+      object reSearch: TRectangle
+        Anchors = [akRight, akBottom]
+        Fill.Color = xFF424858
+        Position.X = 288.000000000000000000
+        Position.Y = -21.000000000000000000
+        Size.Width = 50.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        Visible = False
+        XRadius = 8.000000000000000000
+        YRadius = 8.000000000000000000
+      end
+      object btnSearch: TCornerButton
+        Anchors = [akRight, akBottom]
+        Images = DM.img
+        ImageIndex = 7
+        Position.X = 292.000000000000000000
+        Position.Y = -17.000000000000000000
+        Sides = [Top, Left, Bottom, Right]
+        Size.Width = 41.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'btnImg'
+        TabOrder = 4
+        Visible = False
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+      end
+      object btnBack: TCornerButton
+        Images = FMain.img
+        ImageIndex = 1
+        Position.X = 20.000000000000000000
+        Position.Y = 16.000000000000000000
+        Sides = [Top, Left, Bottom, Right]
+        Size.Width = 41.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'btnImg'
+        TabOrder = 3
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+        OnClick = btnBackClick
+      end
+      object seHeader: TShadowEffect
+        Distance = 3.000000000000000000
+        Direction = 45.000000000000000000
+        Softness = 0.300000011920929000
+        Opacity = 0.250000000000000000
+        ShadowColor = claBlack
+      end
+    end
+  end
+  object loTemp: TLayout
+    StyleName = 'lbTempRadioSearch'
+    Position.Y = 305.000000000000000000
+    Size.Width = 360.000000000000000000
+    Size.Height = 110.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 32
+    object reTempBackground: TRectangle
+      StyleName = 'background'
+      Anchors = [akLeft, akTop, akRight, akBottom]
+      Fill.Bitmap.Bitmap.PNG = {
+        89504E470D0A1A0A0000000D4948445200000265000000FA0806000000E02030
+        980000000473424954080808087C086488000006AA49444154789CEDDD4D6E1B
+        471485D14752A206921C195E919790517690DD13664469C09FEECA208022C890
+        19336EF56DF29C2907F5861FAA887EB3DFFFF8B3150000A369B3FEEB7CEC2100
+        00A8126500000144190040005106001040940100041065000001441900400051
+        0600104094010004106500000144190040005106001040940100041065000001
+        4419004000510600104094010004106500000144190040005106001040940100
+        0410650000014419004000510600104094010004106500000144190040005106
+        0010409401000410650000014419004000510600104094010004106500000144
+        1900400051060010409401000410650000014419004000510600104094010004
+        1065000001441900400051060010409401000410650000014419004000510600
+        1040940100041065000001441900400051060010409401000410650000014419
+        0040005106001040940100041065000001441900400051060010409401000410
+        6500000144190040005106001040940100041065000001441900400051060010
+        4094010004106500000144190040005106001040940100041065000001441900
+        4000510600104094010004106500000144190040005106001040940100041065
+        0000014419004000510600104094010004106500000144190040005106001040
+        9401000410650000014419004000510600104094010004106500000144190040
+        0051060010409401000410650000014419004000510600104094010004106500
+        0001441900400051060010409401000410650000014419004000510600104094
+        0100041065000001441900400051060010409401000410650000014419004000
+        5106001040940100041065000001441900400051060010409401000410650000
+        0144190040005106001040940100041065000001441900400051060010409401
+        0004106500000144190040005106001040940100041065000001441900400051
+        0600104094010004106500000144190040005106001040940100041065000001
+        4419004000510600104094010004B81A7B000080447DD7D5D3E6B10EDDBE5ADF
+        6AB9BCA9DBBBFB9A2F16839CE7A60C00E08DBEEB6ABD5ED57EBFABD6B7AAAADA
+        EDB6B5FEB6AABEEB063953940100BCF1FCBC7989B1D75A6BF5B4791CE44C5106
+        00F0C66EBB7DF7B7C3613FC899A20C00E027B4F6FD0DDAAF20CA000002883200
+        8000A20C0020802803000820CA0000028832008000A20C0020802803000820CA
+        0000028832008000A20C0020802803000820CA0000028832008000A20C0020C0
+        D5D8030000E7AFEFBA7ADA3CD6A1DB57EB5B2D9737757B775FF3C5E22CCF3D85
+        9B320060507DD7D57ABDAAFD7E57AD6F5555B5DB6D6BFD6D557DD79DDDB9A712
+        6500C0A09E9F372F51F45A6BAD9E368F6777EEA944190030A8DD76FBEE6F87C3
+        FEECCE3D9528030046D3DAF73759E77CEE8F8832008000A20C00208028030008
+        20CA0000028832006050F3F96CEC112641940100835A2CAEDFFD6DB9BCF9C049
+        B259B304001333A5D541555577F79FEAAFF5AAFA371F729DCD66757B773FD254
+        79DC9401C0844C6D755055D57CB1A8DF1EBED4F2E69F5BB1D96C5657D7D7F5F0
+        F94B6C488EC14D19004CC8B1D5419F1E3E8F30D571F3C5A2EE3F3D8C3D463451
+        06001332B5D54197EA942766CF970070261257075DA2539F98451900C02F74EC
+        89F93DA20C00E0173AF589599401007C901F3D31FBA33F0030B8A97D5B6D0C6E
+        CA0080414DF1DB6A63106500C0A04EFDE3FBA5116500C0A07C5BEDBF116500C0
+        687C5BED5FA20C0020802803000820CA0000028832008000A20C002080280300
+        0820CA000002D87D090017C40ECA5C6ECA00E042D841994D9401C085B083329B
+        E74B00B81053DD4179294FAE6ECA0080D81D9497F4E42ACA00805897F4E42ACA
+        008058537D723D852803002629F5C9F554A20C0020802803000820CA00000288
+        32008000A20C0020802803000820CA0000028832008000A20C0020C0D5D80300
+        00D3D0775D3D6D1EEBD0EDABF5AD96CB9BBABDBBAFF96231F66867C14D190070
+        54DF75B55EAF6ABFDFBD2C08DFEDB6B5FEB6AABEEB469EEE3C883200E0A8E7E7
+        CD4B8CBDD65AABA7CDE308139D1F5106001CB5DB6EDFFDED70D87FE024E74B94
+        0100FF4B6BDFDFA0F1F344190040005106001040940100041065000001441900
+        4000510600104094010004106500000144190040005106001040940100041065
+        0000014419004000510600104094010004106500000144190040005106001040
+        9401000410650000014419004000510600104094010004106500000144190040
+        0051060010409401000410650000014419004000510600104094010004F81B88
+        FEE9EDC5B021170000000049454E44AE426082}
+      Fill.Bitmap.WrapMode = TileStretch
+      Fill.Kind = Bitmap
+      HitTest = False
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 350.000000000000000000
+      Size.Height = 100.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      XRadius = 12.000000000000000000
+      YRadius = 12.000000000000000000
+    end
+    object imgTemp: TImage
+      StyleName = 'img_blur'
+      MultiResBitmap = <
+        item
+        end>
+      HitTest = False
+      Position.X = 15.000000000000000000
+      Position.Y = 15.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 80.000000000000000000
+      Size.PlatformDefault = False
+      WrapMode = Stretch
+      object TBlurEffect
+        StyleName = 'bl_img'
+        Softness = 0.150000005960464500
+      end
+    end
+    object lblTempNama: TLabel
+      StyleName = 'lblText'
+      Anchors = [akLeft, akTop, akRight]
+      AutoSize = True
+      StyledSettings = [Family, Style]
+      Margins.Top = 15.000000000000000000
+      Margins.Right = 15.000000000000000000
+      Margins.Bottom = 15.000000000000000000
+      Position.X = 110.000000000000000000
+      Position.Y = 15.000000000000000000
+      Size.Width = 200.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 12.500000000000000000
+      TextSettings.FontColor = claWhite
+      TextSettings.VertAlign = Leading
+      Text = 'Text'
+      TabOrder = 3
+    end
+    object imgTempBlur: TImage
+      StyleName = 'img'
+      MultiResBitmap = <
+        item
+        end>
+      HitTest = False
+      Margins.Left = 15.000000000000000000
+      Margins.Top = 15.000000000000000000
+      Margins.Right = 15.000000000000000000
+      Margins.Bottom = 15.000000000000000000
+      Position.X = 15.000000000000000000
+      Position.Y = 15.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 80.000000000000000000
+      Size.PlatformDefault = False
+      object seTempShadow: TShadowEffect
+        StyleName = 'se_img'
+        Distance = 3.000000000000000000
+        Direction = 45.000000000000000000
+        Softness = 0.300000011920929000
+        Opacity = 0.600000023841857900
+        ShadowColor = claBlack
+      end
+    end
+    object btnTempFavorite: TCornerButton
+      StyleName = 'btnTempFavorite'
+      Anchors = [akTop, akRight]
+      Images = FMain.img
+      ImageIndex = 6
+      Position.X = 321.000000000000000000
+      Position.Y = 16.000000000000000000
+      Sides = [Top, Left, Bottom, Right]
+      Size.Width = 24.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'btnImg'
+      TabOrder = 4
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+    end
+  end
+  object memData: TFDMemTable
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    Left = 272
+    Top = 16
+  end
+end

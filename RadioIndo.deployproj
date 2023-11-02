@@ -1,0 +1,1242 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Condition="Exists('$(BDS)\bin\CodeGear.Deployment.targets')" Project="$(BDS)\bin\CodeGear.Deployment.targets"/>
+    <ProjectExtensions>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <PropertyGroup>
+        <DeviceId Condition="'$(Platform)'=='Android'">1A031FDF6004MB</DeviceId>
+        <DeviceId Condition="'$(Platform)'=='Android64'">1A031FDF6004MB</DeviceId>
+        <DeviceId Condition="'$(Platform)'=='iOSDevice64'"/>
+        <DeviceId Condition="'$(Platform)'=='iOSSimARM64'"/>
+    </PropertyGroup>
+    <ItemGroup Condition="'$(Platform)'=='OSX64'"/>
+    <ItemGroup Condition="'$(Platform)'=='Win32'">
+        <DeployFile Include="Win32\Release\RadioIndo.exe" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\</RemoteDir>
+            <RemoteName>RadioIndo.exe</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="assets\img\noImage.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\</RemoteDir>
+            <RemoteName>noImage.png</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='Android64'">
+        <DeployFile Include="sources\Lib\armeabi\libbassenc_mp3.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libbassenc_mp3.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android64\Release\strings.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\values\</RemoteDir>
+            <RemoteName>strings.xml</RemoteName>
+            <DeployClass>Android_Strings</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64-v8a\libbassflac.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
+            <RemoteName>libbassflac.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64-v8a\libbassflac.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
+            <RemoteName>libbassflac.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android64\Release\splash_image_def.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable\</RemoteDir>
+            <RemoteName>splash_image_def.xml</RemoteName>
+            <DeployClass>AndroidSplashImageDef</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi\libbass_ssl.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libbass_ssl.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi\libbass_ssl.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libbass_ssl.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64-v8a\libbass_ssl.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
+            <RemoteName>libbass_ssl.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64-v8a\libbass_ssl.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
+            <RemoteName>libbass_ssl.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi-v7a\libbassenc.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libbassenc.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi-v7a\libbassenc.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libbassenc.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\lib\android\debug\mips\libnative-activity.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\mips\</RemoteDir>
+            <RemoteName>libRadioIndo.so</RemoteName>
+            <DeployClass>AndroidLibnativeMipsFile</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\lib\android\debug\armeabi-v7a\libnative-activity.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libRadioIndo.so</RemoteName>
+            <DeployClass>AndroidLibnativeArmeabiv7aFile</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android64\Release\styles-v21.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\values-v21\</RemoteDir>
+            <RemoteName>styles.xml</RemoteName>
+            <DeployClass>AndroidSplashStylesV21</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi-v7a\libbassflac.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libbassflac.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi-v7a\libbassflac.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libbassflac.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi-v7a\libbassenc_mp3.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libbassenc_mp3.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi-v7a\libbassenc_mp3.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libbassenc_mp3.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi\libbassenc_opus.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libbassenc_opus.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi\libbassenc_opus.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libbassenc_opus.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi-v7a\libbass.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libbass.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi-v7a\libbass.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libbass.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi\libbassenc.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libbassenc.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi\libbassenc.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libbassenc.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\lib\android\debug\armeabi\libnative-activity.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libRadioIndo.so</RemoteName>
+            <DeployClass>AndroidLibnativeArmeabiFile</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi\libbassenc_flac.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libbassenc_flac.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi\libbassenc_flac.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libbassenc_flac.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi\libbassenc_ogg.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libbassenc_ogg.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi\libbassenc_ogg.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libbassenc_ogg.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64-v8a\libbassenc_ogg.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
+            <RemoteName>libbassenc_ogg.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64-v8a\libbassenc_ogg.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
+            <RemoteName>libbassenc_ogg.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\Logo\Notif\24.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-mdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon24</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64-v8a\libbassenc_mp3.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
+            <RemoteName>libbassenc_mp3.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64-v8a\libbassenc_mp3.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
+            <RemoteName>libbassenc_mp3.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\Splash\470x320.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-normal\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage470</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi-v7a\libbassenc_ogg.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libbassenc_ogg.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi-v7a\libbassenc_ogg.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libbassenc_ogg.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\noImage.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\assets\internal\</RemoteDir>
+            <RemoteName>noImage.png</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi\libbassflac.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libbassflac.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi\libbassflac.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libbassflac.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\Logo\72.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-hdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon72</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android64\Release\colors.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\values\</RemoteDir>
+            <RemoteName>colors.xml</RemoteName>
+            <DeployClass>Android_Colors</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\Logo\36.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-ldpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon36</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64-v8a\libbass.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
+            <RemoteName>libbass.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64-v8a\libbass.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
+            <RemoteName>libbass.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi-v7a\libbassenc_opus.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libbassenc_opus.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi-v7a\libbassenc_opus.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libbassenc_opus.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi-v7a\libbass_ssl.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libbass_ssl.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi-v7a\libbass_ssl.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libbass_ssl.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\Logo\Notif\96.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-xxxhdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon96</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android64\Release\RadioIndo.classes" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\classes\</RemoteDir>
+            <RemoteName>RadioIndo.classes</RemoteName>
+            <DeployClass>AndroidClasses</DeployClass>
+            <Operation>64</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\Logo\48.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-mdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon48</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android64\Release\libRadioIndo.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
+            <RemoteName>libRadioIndo.so</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="assets\img\Logo\Notif\48.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-xhdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon48</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi\libbass.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libbass.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi\libbass.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libbass.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\Logo\192.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-xxxhdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon192</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android64\Release\AndroidManifest.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\</RemoteDir>
+            <RemoteName>AndroidManifest.xml</RemoteName>
+            <DeployClass>ProjectAndroidManifest</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64-v8a\libbassenc.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
+            <RemoteName>libbassenc.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64-v8a\libbassenc_flac.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
+            <RemoteName>libbassenc_flac.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64-v8a\libbassenc.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
+            <RemoteName>libbassenc.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64-v8a\libbassenc_flac.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
+            <RemoteName>libbassenc_flac.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64-v8a\libbassenc_opus.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
+            <RemoteName>libbassenc_opus.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android64\Release\styles.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\values\</RemoteDir>
+            <RemoteName>styles.xml</RemoteName>
+            <DeployClass>AndroidSplashStyles</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64-v8a\libbassenc_opus.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
+            <RemoteName>libbassenc_opus.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\Logo\96.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-xhdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon96</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\Logo\144.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-xxhdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon144</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\Splash\960x720.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-xlarge\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage960</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\Splash\426x320.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-small\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage426</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\Logo\Notif\36.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-hdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon36</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi-v7a\libbassenc_flac.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libbassenc_flac.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi-v7a\libbassenc_flac.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libbassenc_flac.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\Logo\Notif\72.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-xxhdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon72</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\Splash\640x480.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-large\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage640</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi\libbassenc_mp3.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libbassenc_mp3.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='Android'">
+        <DeployFile Include="assets\img\Splash\426x320.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-small\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage426</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi\libbassenc_flac.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libbassenc_flac.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64-v8a\libbassenc_ogg.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
+            <RemoteName>libbassenc_ogg.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\Splash\470x320.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-normal\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage470</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\Logo\36.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-ldpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon36</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\Logo\Notif\48.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-xhdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon48</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android\Release\strings.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\values\</RemoteDir>
+            <RemoteName>strings.xml</RemoteName>
+            <DeployClass>Android_Strings</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android\Release\styles-v21.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\values-v21\</RemoteDir>
+            <RemoteName>styles.xml</RemoteName>
+            <DeployClass>AndroidSplashStylesV21</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi-v7a\libbassenc_ogg.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libbassenc_ogg.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi\libbassenc.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libbassenc.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64-v8a\libbass_ssl.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
+            <RemoteName>libbass_ssl.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64\libbassenc_opus.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\arm64\</RemoteDir>
+            <RemoteName>libbassenc_opus.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\Logo\Notif\36.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-hdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon36</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64-v8a\libbassenc_flac.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
+            <RemoteName>libbassenc_flac.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi\libbassenc_opus.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libbassenc_opus.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android\Release\splash_image_def.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable\</RemoteDir>
+            <RemoteName>splash_image_def.xml</RemoteName>
+            <DeployClass>AndroidSplashImageDef</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\Logo\72.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-hdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon72</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi-v7a\libbass.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libbass.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64-v8a\libbass.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
+            <RemoteName>libbass.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64\libbassflac.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\arm64\</RemoteDir>
+            <RemoteName>libbassflac.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android\Release\libRadioIndo.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libRadioIndo.so</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64\libbassenc_mp3.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\arm64\</RemoteDir>
+            <RemoteName>libbassenc_mp3.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi-v7a\libbassflac.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libbassflac.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\Splash\640x480.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-large\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage640</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64-v8a\libbassenc_mp3.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
+            <RemoteName>libbassenc_mp3.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi\libbass_ssl.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libbass_ssl.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\Logo\144.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-xxhdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon144</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi\libbassflac.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libbassflac.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64\libbassenc_flac.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\arm64\</RemoteDir>
+            <RemoteName>libbassenc_flac.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi-v7a\libbassenc_mp3.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libbassenc_mp3.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\lib\android\debug\mips\libnative-activity.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\mips\</RemoteDir>
+            <RemoteName>libRadioIndo.so</RemoteName>
+            <DeployClass>AndroidLibnativeMipsFile</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64-v8a\libbassenc_opus.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
+            <RemoteName>libbassenc_opus.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64-v8a\libbassflac.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
+            <RemoteName>libbassflac.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64\libbass_ssl.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\arm64\</RemoteDir>
+            <RemoteName>libbass_ssl.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android\Release\styles.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\values\</RemoteDir>
+            <RemoteName>styles.xml</RemoteName>
+            <DeployClass>AndroidSplashStyles</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi\libbass.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libbass.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi\libbassenc_mp3.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libbassenc_mp3.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\lib\android\debug\armeabi\libnative-activity.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libRadioIndo.so</RemoteName>
+            <DeployClass>AndroidLibnativeArmeabiFile</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\Splash\960x720.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-xlarge\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage960</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\noImage.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\assets\internal\</RemoteDir>
+            <RemoteName>noImage.png</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android\Release\colors.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\values\</RemoteDir>
+            <RemoteName>colors.xml</RemoteName>
+            <DeployClass>Android_Colors</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\Logo\Notif\72.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-xxhdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon72</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\Logo\192.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-xxxhdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon192</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi\libbassenc_ogg.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libbassenc_ogg.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android\Release\RadioIndo.classes" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\classes\</RemoteDir>
+            <RemoteName>RadioIndo.classes</RemoteName>
+            <DeployClass>AndroidClasses</DeployClass>
+            <Operation>64</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi-v7a\libbass_ssl.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libbass_ssl.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64\libbass.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\arm64\</RemoteDir>
+            <RemoteName>libbass.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64-v8a\libbassenc.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\arm64-v8a\</RemoteDir>
+            <RemoteName>libbassenc.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64\libbassenc_ogg.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\arm64\</RemoteDir>
+            <RemoteName>libbassenc_ogg.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\Logo\96.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-xhdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon96</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\arm64\libbassenc.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\arm64\</RemoteDir>
+            <RemoteName>libbassenc.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\Logo\48.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-mdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon48</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi-v7a\libbassenc.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libbassenc.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi-v7a\libbassenc_opus.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libbassenc_opus.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\Logo\Notif\24.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-mdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon24</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android\Release\AndroidManifest.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\</RemoteDir>
+            <RemoteName>AndroidManifest.xml</RemoteName>
+            <DeployClass>ProjectAndroidManifest</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="sources\Lib\armeabi-v7a\libbassenc_flac.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libbassenc_flac.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="assets\img\Logo\Notif\96.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>RadioIndo\res\drawable-xxxhdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon96</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='OSXARM64'"/>
+    <ItemGroup Condition="'$(Platform)'=='Win64'"/>
+    <ItemGroup Condition="'$(Platform)'=='Linux64'"/>
+    <ItemGroup Condition="'$(Platform)'=='iOSDevice64'"/>
+    <ItemGroup Condition="'$(Platform)'=='iOSSimARM64'"/>
+</Project>
